@@ -34,7 +34,7 @@ public class OcioController {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Información");
         alert.setHeaderText(null);
-        alert.setContentText("Mensaje");
+        alert.setContentText(informacion);
         alert.showAndWait();
     }
 
