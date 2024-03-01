@@ -19,9 +19,18 @@ public class OcioController {
 
     @FXML
     private Label welcomeText;
-
+    String informacion;
     @FXML
     void onEnviar(ActionEvent event) {
+        if(cine.isSelected()){
+            informacion="Cine ha sido seleccionado \n";
+        }
+        if (musica.isSelected()){
+            informacion+="Música ha sido seleccionado \n";
+        }
+        if (videojuegos.isSelected()){
+            informacion+="Videojuegos ha sido seleccionado";
+        }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Información");
         alert.setHeaderText(null);
