@@ -2,11 +2,16 @@ package com.example.ocio_checkbox;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Alert;
 
-public class OcioController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class OcioController implements Initializable {
 
     @FXML
     private CheckBox cine;
@@ -20,6 +25,10 @@ public class OcioController {
     @FXML
     private Label welcomeText;
     String informacion;
+    String[] bebidasDisponibles = {"Agua", "Te", "Vino"};
+
+    @FXML
+    private ComboBox bebidacb;
     @FXML
     void onEnviar(ActionEvent event) {
         if(cine.isSelected()){
@@ -38,5 +47,9 @@ public class OcioController {
         alert.showAndWait();
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        bebidacb.getItems().addAll(bebidasDisponibles);
+    }
 }
 
