@@ -3,7 +3,7 @@ package com.example.ocio_checkbox;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class OcioController {
     @FXML
     private Label welcomeText;
 
